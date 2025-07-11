@@ -196,20 +196,29 @@ const Agent = ({
 
       <div className="w-full flex justify-center">
         {callStatus !== "ACTIVE" ? (
-          <button className="relative btn-call" onClick={() => handleCall()}>
-            <span
-              className={cn(
-                "absolute animate-ping rounded-full opacity-75",
-                callStatus !== "CONNECTING" && "hidden"
-              )}
-            />
+          <div className="flex flex-col items-center">
+            <button
+              className="relative btn-call"
+              onClick={() => handleCall()}
+              title="Click to start the interview"
+            >
+              <span
+                className={cn(
+                  "absolute animate-ping rounded-full opacity-75",
+                  callStatus !== "CONNECTING" && "hidden"
+                )}
+              />
 
-            <span className="relative">
-              {callStatus === "INACTIVE" || callStatus === "FINISHED"
-                ? "Call"
-                : ". . ."}
-            </span>
-          </button>
+              <span className="relative">
+                {callStatus === "INACTIVE" || callStatus === "FINISHED"
+                  ? "Call"
+                  : ". . ."}
+              </span>
+            </button>
+            <div className="mt-2 text-xs text-gray-500 bg-white px-2 py-1 rounded shadow">
+              Click to start the interview
+            </div>
+          </div>
         ) : (
           <button className="btn-disconnect" onClick={() => handleDisconnect()}>
             End

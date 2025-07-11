@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
-import Link from "next/link";
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button";
 import InterviewCard from "@/components/InterviewCard";
+import InterviewButton from "@/components/InterviewButton";
 
 import { getCurrentUser } from "@/lib/actions/auth.action";
 import {
@@ -31,9 +30,7 @@ async function Home() {
             Practice real interview questions & get instant feedback
           </p>
 
-          <Button asChild className="btn-primary max-sm:w-full">
-            <Link href="/interview">Start an Interview</Link>
-          </Button>
+          <InterviewButton />
         </div>
 
         <Image

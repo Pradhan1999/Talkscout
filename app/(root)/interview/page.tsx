@@ -13,7 +13,12 @@ const Page = async () => {
           <ArrowLeft className="w-6 h-6" />
         </Link>
 
-        <h3>Interview generation</h3>
+        <div>
+          <h3>Interview generation</h3>
+          <p className="text-sm text-muted-foreground">
+            Please click the button below to start the interview process.
+          </p>
+        </div>
       </div>
 
       <Agent
