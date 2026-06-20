@@ -12,14 +12,24 @@ const Layout = async ({ children }: { children: ReactNode }) => {
 
   return (
     <div className="root-layout">
-      <nav className="flex justify-between items-center w-full">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="MockMate Logo" width={50} height={38} />
-          <h2 className="text-primary-100">TalkScout</h2>
+      {/* ── Neo-Brutalist nav bar ── */}
+      <nav className="flex justify-between items-center w-full pb-6 border-b-[3px] border-nb-black">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="border-[3px] border-nb-black shadow-[3px_3px_0px_#111111] rounded-xl overflow-hidden group-active:translate-x-[2px] group-active:translate-y-[2px] group-active:shadow-[1px_1px_0px_#111111] transition-none">
+            <Image
+              src="/logo.png"
+              alt="TalkScout Logo"
+              width={48}
+              height={36}
+            />
+          </div>
+          <span className="text-xl font-black uppercase tracking-tight text-nb-black">
+            TalkScout
+          </span>
         </Link>
 
         <form action={signOut}>
-          <Button type="submit" className="btn-secondary">
+          <Button type="submit" variant="secondary" size="default">
             Logout
           </Button>
         </form>

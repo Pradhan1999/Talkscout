@@ -16,10 +16,12 @@ export default function InterviewButton() {
   return (
     <Button
       onClick={handleClick}
-      className="btn-primary max-sm:w-full"
+      variant="default"
+      size="lg"
+      className="max-sm:w-full text-base"
       disabled={isLoading}
     >
-      {isLoading ? "Connecting..." : "Start an Interview"}
+      {isLoading ? "Connecting…" : "Start an Interview →"}
     </Button>
   );
 }

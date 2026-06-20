@@ -11,10 +11,11 @@ const DisplayTechIcons = async ({ techStack }: TechIconProps) => {
         <div
           key={tech}
           className={cn(
-            "relative group bg-dark-300 rounded-full p-2 flex flex-center",
-            index >= 1 && "-ml-3"
+            "relative group bg-nb-cream border-[2px] border-nb-black shadow-[2px_2px_0px_#111111] rounded-lg p-1.5 flex-center",
+            index >= 1 && "-ml-2"
           )}
         >
+          {/* Neo-Brutalist tooltip */}
           <span className="tech-tooltip">{tech}</span>
 
           <Image
